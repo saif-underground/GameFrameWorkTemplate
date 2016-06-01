@@ -18,7 +18,6 @@ public class GameMain extends JPanel {    // main class for the game
     static final int UPDATES_PER_SEC = 4;    // number of game update per second
     static final long UPDATE_PERIOD_NSEC = 1000000000L / UPDATES_PER_SEC;  // nanoseconds
     // ......
-    static int x = 0;
     // Enumeration for the states of the game.
     static enum GameState {
         INITIALIZED, PLAYING, PAUSED, GAMEOVER, DESTROYED
@@ -120,11 +119,7 @@ public class GameMain extends JPanel {    // main class for the game
                 break;
             case PLAYING:
                 // ......
-                g2d.draw(new Rectangle(x, x, 20, 20));
-                x++;
-                if(x == CANVAS_WIDTH){
-                    x = 0;
-                }
+                
                 break;
             case PAUSED:
                 // ......
